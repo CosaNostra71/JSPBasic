@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>JSPBasic</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- web.xml은 프로젝트에 대한 전체 설정이 들어가는 곳입니다. -->
+  <!-- web.xml에 오타가 있으면 프로젝트가 전체다 고장나기 때문에 주의 -->
+  
+  <servlet>
+  <servlet-name>appServlet</servlet-name>
+  <servlet-class>servlet.example.TestServlet2</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>appServlet</servlet-name>
+ 	<url-pattern>/peach</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 에러의 종류별로 보여질 에러페이지를 등록 -->
+  <!-- 
+  <error-page>
+  <error-code>404</error-code>
+  <location>/errorpage/error_view.jsp</location>
+  </error-page>
+  
+  <error-page>
+  <error-code>500</error-code>
+  <location>/errorpage/error_view.jsp</location>
+  </error-page>
+  
+  <error-page>
+  	<exception-type>java.lang.NullPointerException</exception-type>
+  	<location>/errorpage/error_view.jsp</location>
+  </error-page>
+  
+    -->
+  
+</web-app>
